@@ -70,3 +70,10 @@ if __name__ == "__main__":
 
     cnn_class.print_acc()
 
+    cnn_class.save_model("CNN_on_MNIST")
+
+    # cnn_class.load_model("CNN_on_MNIST")
+    # est_loss, test_acc = cnn_class.model.evaluate(test_images, test_labels, verbose=2)
+    # print("Estimated loss: ", est_loss)  # 0.5835
+    # print("Testing accuracy: ", test_acc)  # 0.7141
+

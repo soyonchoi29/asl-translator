@@ -4,11 +4,11 @@ import os
 import matplotlib.pyplot as plt
 
 from keras import losses
-from keras.datasets import mnist
+from keras.datasets import cifar10
 from keras import layers, models
 
 
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
 
 train_images = X_train/255.0
 train_labels = y_train
@@ -24,8 +24,8 @@ class CNN:
     def build_model(self):
 
         # create convolutional base
-        self.model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))
-        self.model.add(layers.MaxPool2D((2, 2)))
+        self.model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+        self.model.add(layers.MaxPooling2D((2, 2)))
         self.model.add(layers.Conv2D(64, (3, 3), activation='relu'))
         self.model.add(layers.MaxPooling2D((2, 2)))
         self.model.add(layers.Conv2D(64, (3, 3), activation='relu'))
@@ -44,7 +44,7 @@ class CNN:
 
     def fit_model(self):
 
-        self.model.fit(train_images, train_labels, epochs=3, validation_data=(test_images, test_labels))
+        self.model.fit(train_images, train_labels, epochs=5, validation_data=(test_images, test_labels))
 
         return self.model
 
@@ -64,8 +64,16 @@ class CNN:
 
 if __name__ == "__main__":
 
-    cnn_class = CNN()
-    cnn_class.build_model()
-    cnn_model = cnn_class.fit_model()
+    new_cnn_class = CNN()
+    new_cnn_class.build_model()
+    new_cnn_model = new_cnn_class.fit_model()
 
-    cnn_class.print_acc()
+    new_cnn_class.print_acc()
+
+    # new_cnn_class.save_model("CNN_on_CIFAR10")
+
+    # mnist_cnn_class = CNN()
+    # mnist_cnn_class.load_model("CNN_on_MNIST")
+    # updated_model = mnist_cnn_class.fit_model()
+    #
+    # mnist_cnn_class.print_acc()
