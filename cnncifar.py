@@ -62,6 +62,11 @@ class CNN:
         print("** Model was loaded! **")
 
 
+    def update_size(self, index, dimensions):
+        self.model.layers[index].input_shape = dimensions
+        return self.model
+
+
 if __name__ == "__main__":
 
     new_cnn_class = CNN()
@@ -70,7 +75,7 @@ if __name__ == "__main__":
 
     new_cnn_class.print_acc()
 
-    # new_cnn_class.save_model("CNN_on_CIFAR10")
+    new_cnn_class.save_model("CNN_on_CIFAR10")  # loss = 1.298, acc = 0.5015
 
     # mnist_cnn_class = CNN()
     # mnist_cnn_class.load_model("CNN_on_MNIST")
