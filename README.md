@@ -10,3 +10,4 @@ Demo video:
 
 https://user-images.githubusercontent.com/100095847/202308494-34bc9ab4-04ae-416f-8466-17ed27060566.mp4
 
+This project is funded by the Gregory S. Call Academic Intern program at Amherst College under Professor Scott P. Alfeld.
