@@ -8,4 +8,6 @@ Run main.py for a demo!
 
 Demo video:
 
-https://user-images.githubusercontent.com/100095847/202308494-34bc9ab4-04ae-416f-8466-17ed27060566.mp4
+https://github.com/soyonchoi29/asl-translator/assets/100095847/cdc352a7-478c-4ed6-9acb-a32d02c65532
+
+
