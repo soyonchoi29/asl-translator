@@ -7,8 +7,8 @@ Utilizes CNNs mostly trained on [this dataset](https://www.kaggle.com/datasets/g
 Run main.py for a demo!
 
 Implemented:
-- CNN on raw ASL data from online source
-- CNN on raw self-collected webcam data
+- CNN on raw ASL data from online source using TensorFlow and PyTorch
+- CNN on raw self-collected webcam data using TensorFlow
 - CNN on coordinates of hand given by processing raw online data through MediaPipe
 - Model fine-tuning (online source model was fine-tuned with self-collected data)
 - Computer vision using OpenCV and MediaPipe hand detection library
