@@ -4,7 +4,8 @@
 
 A real-time translation software that detects user's hand and predicts what ASL letter they are holding up.
 Utilizes CNNs mostly trained on [this dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet/metadata?resource=download).
-Run main.py for a demo!
+Run for a demo:
+$ python main.py
 
 Implemented:
 - CNN on raw ASL data from online source using TensorFlow and PyTorch
